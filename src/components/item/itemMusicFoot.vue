@@ -47,6 +47,8 @@ export default {
         },
         changeDuration: function () {
             this.updateDuration(this.$refs.audio.duration);
+            this.$refs.audio.play();
+            console.log(12312);
 
         },
         updateTime(e) {
@@ -63,11 +65,11 @@ export default {
     watch: {
         playListIndex: function () {
             this.changePlay(true);
-            this.$refs.audio.autoplay = true;
+
         },
         playList: function () {
             this.changePlay(true);
-            this.$refs.audio.autoplay = true;
+
         },
     },
     components: { MusicDetail },
